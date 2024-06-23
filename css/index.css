@@ -143,7 +143,7 @@ body { color: #241808; }
 .Salad-One-Money {
     padding: 1em 2em; border: none; border-radius: 5px; font-weight: bold; letter-spacing: 5px; margin-top: 280px;
     text-transform: uppercase; cursor: pointer; color: #af8c2c; transition: all 1000ms; margin-left: 220px;
-    font-size: 15px; position: relative; overflow: hidden; outline: 2px solid #af7b2c;
+    font-size: 15px; position: relative; overflow: hidden; outline: 2px solid #af7b2c; font-family: 'JKU';
 }
 .Salad-One-Money:hover { color: #ffffff; transform: scale(1.1); outline: 2px solid #cabc70; box-shadow: 4px 5px 17px -4px #917826; }
 .Salad-One-Money::before {
