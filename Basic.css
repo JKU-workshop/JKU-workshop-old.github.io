@@ -1,0 +1,7 @@
+/* Basic */
+@font-face { font-family: 'JKU'; src: url('JKU/JKU-Regular.ttf'); }
+a{ text-decoration: none; color: #241808; font-family: 'JKU'; }
+body{ background-color: #FFFBEE; margin: 0%; overflow-x: auto; overflow-y: auto; font-family: 'JKU'; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar:hover { width: 7px; height: 7px; }
+.cursor-hover { user-select:none; -webkit-user-select:none; -moz-user-select:none; }

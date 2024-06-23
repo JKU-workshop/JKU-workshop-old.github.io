@@ -1,0 +1,83 @@
+/* Body */
+body { color: #241808; }
+/* Header-Icon-Box */
+.Header-Icon-Box {
+    width: 100px; height: 100px; margin-top: 20px; margin-left: 20px;
+    background-color: #ffe591; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Header-Icon-Box:hover { background-color: #ffe386; margin-top: 30px; margin-left: 30px; }
+.Header-Icon-Box-Icon {
+    width: 100px; height: 100px; margin-top: 10px; margin-left: 10px;
+    border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Header-Icon-Box-Icon:hover { margin-top: 5px; margin-left: 5px; }
+/* Contct-information */
+.Contct-information {
+    width: 350px; height: 100px; margin-top: 20px; margin-left: 150px;
+    background-color: #fff0be; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Contct-information:hover { background-color: #ffe798; margin-top: 30px; margin-left: 160px; }
+.Contct-information-Word {
+    width: 350px; height: 100px; margin-top: 10px; margin-left: 10px;
+    background-color: #ffe693; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Contct-information-Word:hover { background-color: #ffe282; margin-top: 5px; margin-left: 5px; }
+/* CI-Phone */
+.Contct-information-Phone {
+    margin-top: 20px; margin-left: 10px; font-size: 20px; color: #241808;
+    position: absolute; transition: all 0.3s ease-in-out;
+} .Contct-information-Phone:hover { font-size: 23px; color: #422c0e; }
+/* CI-Mail */
+.Contct-information-Mail {
+    margin-top: 50px; margin-left: 10px; font-size: 20px; color: #241808;
+    position: absolute; transition: all 0.3s ease-in-out;
+} .Contct-information-Mail:hover { font-size: 23px; color: #422c0e; }
+/* Business-Time-Box */
+.Business-Time-Box {
+    width: 500px; height: 270px; margin-top: 150px; margin-left: 20px;
+    background-color: #ffe282; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Business-Time-Box:hover { background-color: #ffe07b; margin-top: 160px; margin-left: 30px; }
+.Business-Time-Box-Time {
+    width: 500px; height: 270px; margin-top: 10px; margin-left: 10px;
+    background-color: #fcebb4; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Business-Time-Box-Time:hover { background-color: #fff1c2; margin-top: 5px; margin-left: 5px; }
+.Business-Time-Box-Title {
+    margin-top: 10px; margin-left: 200px; font-size: 25px;
+    position: absolute; transition: all 0.3s ease-in-out;
+} .Business-Time-Box-Title:hover { font-size: 27px; }
+/* Business-Time-Box-Day */
+.Business-Time-Box-Day { margin-top: 50px; font-size: 20px; position: absolute; transition: all 0.3s ease-in-out; }
+.Business-Time-Box-Day:hover { font-size: 22px; }
+.BTBD-Label1 { margin-left: 90px; }
+.BTBD-Label2 { margin-left: 140px; }
+.BTBD-Label3 { margin-left: 190px; }
+.BTBD-Label4 { margin-left: 240px; }
+.BTBD-Label5 { margin-left: 290px; }
+.BTBD-Label6 { margin-left: 340px; }
+.BTBD-Label7 { margin-left: 390px; }
+/* Business-Time-Box-Day-Time */
+.Business-Time-Box-Day-Time { margin-left: 20px; font-size: 20px; position: absolute; transition: all 0.3s ease-in-out; }
+.BTBDT-Label0630 { margin-top: 90px; }
+.BTBDT-AM-To { margin-top: 110px; margin-left: 40px; transform: rotate(90deg); }
+.BTBDT-Label0830 { margin-top: 130px; }
+.BTBDT-Label1530 { margin-top: 180px; }
+.BTBDT-PM-To { margin-top: 200px; margin-left: 40px; transform: rotate(90deg); }
+.BTBDT-Label1800 { margin-top: 220px; }
+/* checkbox */
+.BTBDT-CheckBox { display: inline-flex; align-items: center; cursor: pointer; user-select: none; font-size: 16px; color: #333; transition: color 0.3s; }
+.BTBDT-CheckBox input[type="checkbox"] { display: none; }
+.BTBDT-CheckBox .BTBDT-CheckBox-mark {
+  width: 24px; height: 24px; border: 2px solid #333; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 10px; transition: background-color 0.3s, border-color 0.3s, transform 0.3s; transform-style: preserve-3d; }
+.BTBDT-CheckBox .BTBDT-CheckBox-mark::before { content: "\2713"; font-size: 16px; color: transparent; transition: color 0.3s, transform 0.3s; }
+.BTBDT-CheckBox input[type="checkbox"]:checked + .BTBDT-CheckBox-mark { background-color: #333; border-color: #333; transform: scale(1.1) rotateZ(360deg) rotateY(360deg); }
+.BTBDT-CheckBox input[type="checkbox"]:checked + .BTBDT-CheckBox-mark::before { color: #fff; }
+.BTBDT-CheckBox:hover { color: #666; }
+.BTBDT-CheckBox:hover .BTBDT-CheckBox-mark { border-color: #666; background-color: #f0f0f0; transform: scale(1.05); }
+.BTBDT-CheckBox input[type="checkbox"]:focus + .BTBDT-CheckBox-mark { box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2); outline: none; }
+.BTBDT-CheckBox .BTBDT-CheckBox-mark, .BTBDT-CheckBox input[type="checkbox"]:checked + .BTBDT-CheckBox-mark { transition: background-color 1.3s, border-color 1.3s, color 1.3s, transform 0.3s; }
+/* CheckBoxStyle */
+.BTBDDa { margin-top: 110px; }
+.BTBDDp { margin-top: 60px; }
+.BTBDD1 { margin-left: 85px; }
+.BTBDD2 { margin-left: 4px; }
+.BTBDD3 { margin-left: 4px; }
+.BTBDD4 { margin-left: 4px; }
+.BTBDD5 { margin-left: 4px; }
+.BTBDD6 { margin-left: 4px; }
+.BTBDD7 { margin-left: 4px; }
