@@ -193,7 +193,7 @@ body { color: #241808; }
 .Donut-One-Money:hover { color: #ffffff; transform: scale(1.1); outline: 2px solid #e2d066; box-shadow: 4px 5px 17px -4px #ebd385; }
 .Donut-One-Money::before {
     content: ""; position: absolute; left: -50px; top: 0; width: 0;
-    height: 100%; background-color: #af902c; transform: skewX(45deg); z-index: -1; transition: width 1000ms;
+    height: 100%; background-color: #d3bb6b; transform: skewX(45deg); z-index: -1; transition: width 1000ms;
 } .Donut-One-Money:hover::before { width: 250%; }
 /* Place-Order */
 .Place-Order {
@@ -201,7 +201,7 @@ body { color: #241808; }
     text-transform: uppercase; cursor: pointer; color: #bd9936; transition: all 1000ms; margin-left: 150px;
     font-size: 15px; position: relative; overflow: hidden; outline: 2px solid #df9c37; font-family: 'JKU';
 }
-.Place-Order:hover { color: #ffffff; transform: scale(1.1); outline: 2px solid #f5da43; box-shadow: 4px 5px 17px -4px #d6ac20; }
+.Place-Order:hover { position: absolute; color: #ffffff; transform: scale(1.1); outline: 2px solid #f5da43; box-shadow: 4px 5px 17px -4px #d6ac20; }
 .Place-Order::before {
     content: ""; position: absolute; left: -50px; top: 0; width: 0;
     height: 100%; background-color: #caa733; transform: skewX(45deg); z-index: -1; transition: width 1000ms;

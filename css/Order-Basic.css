@@ -1,0 +1,87 @@
+body { display: flex; justify-content: center; }
+/* Form-Box */
+.Form-Box {
+    width: 400px; height: 500px; margin-top: 20px; margin-left: 0px;
+    background-color: #ffe89c; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Form-Box:hover { background-color: #ffde70; margin-top: 30px; margin-left: 10px; }
+.Form-Box-Form {
+    width: 400px; height: 500px; margin-top: 10px; margin-left: 10px; display: flex; justify-content: center;
+    background-color: #ffdd6e; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Form-Box-Form:hover { background-color: #ffe9a0; margin-top: 5px; margin-left: 5px; }
+/* Name-Box */
+.Order-Name { position: absolute; margin-top: 20px; }
+.Order-Name input { padding: 15px 20px; outline: none; background: transparent; border-radius: 5px; color: #a89041; border: 1px solid #c29f40; font-size: 20px; font-family: 'JKU'; }
+.Order-Name span { position: absolute; left: 0; padding: 15px 20px; pointer-events: none; font-size: 1em; transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93); color: #cea73c; letter-spacing: 0.1em; }
+.Order-Name input:focus ~ span, .Order-Name input:valid ~ span { font-size: 15px; transform: translateX(14px) translateY(-7.5px); padding: 0 5px; border-radius: 2px; background: #fff2c6; letter-spacing: 0em; border: 1px solid #eeb156; }
+/* Get-dot-Box */
+.Get-dot-Box-select { height: 170px; margin-top: 100px; margin-right: 5px; width: fit-content; cursor: pointer; position: relative; transition: 300ms; color: white; overflow: hidden; }
+.Get-dot-Box-selected { height: 40px;  background-color: #a18c57; padding: 5px; margin-bottom: 3px; border-radius: 5px; position: relative; z-index: 10000; font-size: 20px; display: flex; align-items: center; justify-content: space-between; }
+.Get-dot-Box-arrow { position: relative; right: 0px; height: 10px; transform: rotate(-90deg); width: 25px; fill: white; z-index: 10000; transition: 300ms; }
+.Get-dot-Box-options { display: flex; flex-direction: column; border-radius: 5px; padding: 5px; background-color: #a18c57; position: relative; top: -100px; opacity: 0; transition: 300ms; }
+.Get-dot-Box-select:hover > .Get-dot-Box-options { opacity: 1; top: 0; }
+.Get-dot-Box-select:hover > .Get-dot-Box-selected .Get-dot-Box-arrow { transform: rotate(0deg); }
+.Get-dot-Box-option { border-radius: 5px; padding: 5px; transition: 300ms; background-color: #a18c57; width: 150px; font-size: 20px; }
+.Get-dot-Box-option:hover { background-color: #6d6451; }
+.Get-dot-Box-options input[name="Dot-option"] { display: none; }
+.Get-dot-Box-options label { display: inline-block; }
+.Get-dot-Box-options label::before { content: attr(data-txt); }
+.Get-dot-Box-options input[name="Dot-option"]:checked + label { display: none; }
+.Get-dot-Box-options input[name="Dot-option"]#Get-dot-Box-all:checked + label { display: none; }
+.Get-dot-Box-select:has(.Get-dot-Box-options input[name="Dot-option"]#Get-dot-Box-all:checked) .Get-dot-Box-selected::before { content: attr(data-default); }
+.Get-dot-Box-select:has(.Get-dot-Box-options input[name="Dot-option"]#Store-Front:checked) .Get-dot-Box-selected::before { content: attr(data-one); }
+.Get-dot-Box-select:has(.Get-dot-Box-options input[name="Dot-option"]#SHHS:checked) .Get-dot-Box-selected::before { content: attr(data-two); }
+.Get-dot-Box-select:has(.Get-dot-Box-options input[name="Dot-option"]#SMJH:checked) .Get-dot-Box-selected::before { content: attr(data-three); }
+/* Get-Time-Box */
+.Get-Time-Box-select { height: 238px; margin-top: 100px; margin-left: 5px; width: fit-content; cursor: pointer; position: relative; transition: 300ms; color: white; overflow: hidden; }
+.Get-Time-Box-selected { height: 40px;  background-color: #a18c57; padding: 5px; margin-bottom: 3px; border-radius: 5px; position: relative; z-index: 100000; font-size: 20px; display: flex; align-items: center; justify-content: space-between; }
+.Get-Time-Box-arrow { position: relative; right: 0px; height: 10px; transform: rotate(-90deg); width: 25px; fill: white; z-index: 100000; transition: 300ms; }
+.Get-Time-Box-options { display: flex; flex-direction: column; border-radius: 5px; padding: 5px; background-color: #a18c57; position: relative; top: -100px; opacity: 0; transition: 300ms; }
+.Get-Time-Box-select:hover > .Get-Time-Box-options { opacity: 1; top: 0; }
+.Get-Time-Box-select:hover > .Get-Time-Box-selected .Get-Time-Box-arrow { transform: rotate(0deg); }
+.Get-Time-Box-option { border-radius: 5px; padding: 5px; transition: 300ms; background-color: #a18c57; width: 150px; font-size: 20px; }
+.Get-Time-Box-option:hover { background-color: #6d6451; }
+.Get-Time-Box-options input[name="Time-option"] { display: none; }
+.Get-Time-Box-options label { display: inline-block; }
+.Get-Time-Box-options label::before { content: attr(data-txt); }
+.Get-Time-Box-options input[name="Time-option"]:checked + label { display: none; }
+.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-all:checked + label { display: none; }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-all:checked) .Get-Time-Box-selected::before { content: attr(data-default); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-2:checked) .Get-Time-Box-selected::before { content: attr(data-one); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-3:checked) .Get-Time-Box-selected::before { content: attr(data-two); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-4:checked) .Get-Time-Box-selected::before { content: attr(data-three); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-5:checked) .Get-Time-Box-selected::before { content: attr(data-four); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-6:checked) .Get-Time-Box-selected::before { content: attr(data-five); }
+/* Next-Week */
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-Next-2:checked) .Get-Time-Box-selected::before { content: attr(data-six); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-Next-3:checked) .Get-Time-Box-selected::before { content: attr(data-seven); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-Next-4:checked) .Get-Time-Box-selected::before { content: attr(data-eight); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-Next-5:checked) .Get-Time-Box-selected::before { content: attr(data-nine); }
+.Get-Time-Box-select:has(.Get-Time-Box-options input[name="Time-option"]#Get-Time-Box-Next-6:checked) .Get-Time-Box-selected::before { content: attr(data-ten); }
+/* AM-PM */
+.AM-PM-Box { display: flex; position: absolute; justify-content: center; flex-direction: row; font-family: 'JKU'; font-size: 16px; font-weight: 600; color: white; margin-top: 380px; margin-left: 0px;}  
+.AM-PM-Box-Title { margin-top: -30px; margin-left: 0px; font-size: 20px; color: #53350d; position: absolute; transition: all 0.3s ease-in-out; }
+.AM-PM-Box input[name="AM-PM-Box-radio"] { display: none; }  
+.AM-PM-Box label { display: flex; align-items: center; height: 20px; width: 110px; padding: 10px; border: 1px solid #ccc; background-color: #634d2d; border-radius: 5px; margin-right: 5px; margin-left: 5px; cursor: pointer; position: relative; transition: all 0.3s ease-in-out; }
+.AM-PM-Box label:before { content: ""; display: block; position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%); width: 10px; height: 10px; border-radius: 50%; background-color: #fff; border: 2px solid #ccc; transition: all 0.3s ease-in-out; }
+.AM-PM-Box input[name="AM-PM-Box-radio"]:checked + label:before { background-color: #806200; top: 0; }  
+.AM-PM-Box input[name="AM-PM-Box-radio"]:checked + label { background-color: #e1b641; color: #fff; border-color: #ebc681; animation: AM-PM-AP 0.5s ease-in-out; }  
+@keyframes AM-PM-AP { 0% { transform: translateX(0); } 50% { transform: translateY(-10px); } 100% { transform: translateX(0); } }
+/* Icon-IMG */
+.Icon-IMG.Box { position: absolute; margin-top: 0px; margin-left: 0px; }
+.Icon-IMG {
+    width: 390px; height: 150px; margin-top: 170px; margin-left: -20px; opacity: 0.5;
+    border-radius: 10px; position: absolute;
+}
+/* Next-Page */
+.Next-Page {
+    outline: 0; position: absolute; display: inline-flex; align-items: center; justify-content: space-between;
+    background: #b38b40; min-width: 200px; border: 0; border-radius: 5px; margin-top: 480px; margin-left: -270px;
+    box-shadow: 0 4px 12px #0000001a; box-sizing: border-box; padding: 16px 20px; color: #fff;
+    font-size: 12px; font-weight: 600; font-family: 'JKU'; letter-spacing: 1.2px; text-transform: uppercase; overflow: hidden; cursor: pointer;
+ }
+.Next-Page:hover { opacity: .95; }
+.Next-Page .NextPage { border-radius: 100%; animation: NEXTPAGE 0.6s linear infinite; }  
+@keyframes NEXTPAGE {
+    0% { box-shadow: 0 0 0 0 #ffffff1a, 0 0 0 20px #ffffff1a, 0 0 0 40px #ffffff1a, 0 0 0 60px #ffffff1a; }
+  100% { box-shadow: 0 0 0 20px #ffffff1a, 0 0 0 40px #ffffff1a, 0 0 0 60px #ffffff1a, 0 0 0 80px #ffffff00; }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="Basic.css">
+    <link rel="stylesheet" type="text/css" href="css/Order-Basic.css">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- Header Icon -->
+    <link rel="icon" type="image/x-icon" href="img/icon.ico" />
+    <title>健康優烘焙坊</title>
+</head>
+<body class="cursor-hover">
+    <!-- Form-Box -->
+    <div class="Form-Box"><div class="Form-Box-Form">
+        <!-- Name-Box -->
+        <div class="Order-Name"><input required="" type="text" class="Order-Name-Text"><span>訂貨人姓名</span></div>
+        <!-- Icon -->
+        <div class="Icon-IMG-Box"><img src="img/bg.jpg" class="Icon-IMG"></div>
+        <!-- Get-dot-Box -->
+        <div class="Get-dot-Box-select">
+            <div class="Get-dot-Box-selected" data-default="取貨地點" data-one="內湖店面" data-two="興華高中" data-three="三民國中"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="Get-dot-Box-arrow"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></div>
+            <div class="Get-dot-Box-options">
+                <div><input id="Get-dot-Box-all" name="Dot-option" type="radio" value="ALL" checked="" /><label class="Get-dot-Box-option" for="Get-dot-Box-all" data-txt="取貨地點"></label></div>
+                <div><input id="Store-Front" name="Dot-option" type="radio" value="內湖店面" /><label class="Get-dot-Box-option" for="Store-Front" data-txt="內湖店面"></label></div>
+                <div><input id="SHHS" name="Dot-option" type="radio" value="興華高中" /><label class="Get-dot-Box-option" for="SHHS" data-txt="興華高中"></label></div>
+                <div><input id="SMJH" name="Dot-option" type="radio" value="三民國中" /><label class="Get-dot-Box-option" for="SMJH" data-txt="三民國中"></label></div>
+        </div></div>
+        <!-- Get-Time-Box -->
+        <div class="Get-Time-Box-select">
+            <div class="Get-Time-Box-selected" data-default="取貨時間" data-one="星期二" data-two="星期三" data-three="星期四" data-four="星期五" data-five="星期六"
+            data-six="下星期二" data-seven="下星期三" data-eight="下星期四" data-nine="下星期五" data-ten="下星期六"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="Get-Time-Box-arrow"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></div>
+            <div class="Get-Time-Box-options">
+                <div class="GTBO GTBO0"><input id="Get-Time-Box-all" name="Time-option" type="radio" value="ALL" checked /><label class="Get-Time-Box-option" for="Get-Time-Box-all" data-txt="取貨時間"></label></div>
+                <div class="GTBO GTBO2"><input id="Get-Time-Box-2" name="Time-option" type="radio" value="d2" /><label class="Get-Time-Box-option" for="Get-Time-Box-2" data-txt="星期二"></label></div>
+                <div class="GTBO GTBO3"><input id="Get-Time-Box-3" name="Time-option" type="radio" value="d3" /><label class="Get-Time-Box-option" for="Get-Time-Box-3" data-txt="星期三"></label></div>
+                <div class="GTBO GTBO4"><input id="Get-Time-Box-4" name="Time-option" type="radio" value="d4" /><label class="Get-Time-Box-option" for="Get-Time-Box-4" data-txt="星期四"></label></div>
+                <div class="GTBO GTBO5"><input id="Get-Time-Box-5" name="Time-option" type="radio" value="d5" /><label class="Get-Time-Box-option" for="Get-Time-Box-5" data-txt="星期五"></label></div>
+                <div class="GTBO GTBO6"><input id="Get-Time-Box-6" name="Time-option" type="radio" value="d6" /><label class="Get-Time-Box-option" for="Get-Time-Box-6" data-txt="星期六"></label></div>
+                <!-- -Next-Week -->
+                <div class="GTBON GTBON2"><input id="Get-Time-Box-Next-2" name="Time-option" type="radio" value="d2" /><label class="Get-Time-Box-option" for="Get-Time-Box-Next-2" data-txt="下星期二"></label></div>
+                <div class="GTBON GTBON3"><input id="Get-Time-Box-Next-3" name="Time-option" type="radio" value="d3" /><label class="Get-Time-Box-option" for="Get-Time-Box-Next-3" data-txt="下星期三"></label></div>
+                <div class="GTBON GTBON4"><input id="Get-Time-Box-Next-4" name="Time-option" type="radio" value="d4" /><label class="Get-Time-Box-option" for="Get-Time-Box-Next-4" data-txt="下星期四"></label></div>
+                <div class="GTBON GTBON5"><input id="Get-Time-Box-Next-5" name="Time-option" type="radio" value="d5" /><label class="Get-Time-Box-option" for="Get-Time-Box-Next-5" data-txt="下星期五"></label></div>
+                <div class="GTBON GTBON6"><input id="Get-Time-Box-Next-6" name="Time-option" type="radio" value="d6" /><label class="Get-Time-Box-option" for="Get-Time-Box-Next-6" data-txt="下星期六"></label></div>
+        </div></div>
+        <!-- AM-PM -->
+        <div class="AM-PM-Box">
+            <div class="AM-PM-Box-Title">具體取貨時間</div>
+            <div class="APBR-AM"><input value="AM" name="AM-PM-Box-radio" id="AM-PM-Box-radio-AM" type="radio"><label for="AM-PM-Box-radio-AM">上午（6:30~8:30）</label></div>
+            <div class="APBR-PM"><input value="PM" name="AM-PM-Box-radio" id="AM-PM-Box-radio-PM" type="radio"><label for="AM-PM-Box-radio-PM">下午（15:30~18:00）</label></div>
+        </div>
+        <!-- Next-Page -->
+        <div><button class="Next-Page"><i class="NextPage"></i>下一頁<i class="NextPage"></i></button></div>
+        <script>
+            $(".Get-Time-Box-select").show(), $(".AM-PM-Box").show(), $(".GTBO").show(), $(".APBR-AM").show();
+            var date = new Date(); /* 今天星期幾 */
+            var dayofWeek = date.getDay();
+            if(dayofWeek >= 1) $(".GTBON").hide();
+            if(dayofWeek >= 2) $(".GTBO2").hide(), $(".GTBON2").show();
+            if(dayofWeek >= 3) $(".GTBO3").hide(), $(".GTBON3").show();
+            if(dayofWeek >= 4) $(".GTBO4").hide(), $(".GTBON4").show();
+            if(dayofWeek >= 5) $(".GTBO5").hide(), $(".GTBON5").show();
+            if(dayofWeek >= 6) $(".GTBO6").hide(), $(".GTBON6").show();
+            // $(".cursor-hover").click(function(){$(".AM-PM-Box").css("margin-top", "200px");});
+            // $(".Get-Time-Box-selected").click(function(){$(".AM-PM-Box").css("margin-top", "380px");});
+            // $(".Get-dot-Box-selected").click(function(){$(".AM-PM-Box").css("margin-top", "300px");});
+            $("input[name=Time-option]").click(function(){
+                /* $("input[name=Time-option]:checked").each(function(){alert($(this).val());}); */
+                // $(".AM-PM-Box").css("margin-top", "200px");
+                if($(this).val() == "d6") $(".APBR-AM").hide();
+                else $(".APBR-AM").show();
+            });
+            $("input[name=Dot-option]").click(function(){
+                /* $("input[name=Dot-option]:checked").each(function(){alert($(this).val());}); */
+                // $(".AM-PM-Box").css("margin-top", "200px");
+                if($(this).val() != "內湖店面") $(".Get-Time-Box-select").hide(), $(".AM-PM-Box").hide(), $(".Icon-IMG").css("margin-left", "-108px"), $(".Next-Page").css("margin-left", "-183px");
+                else $(".Get-Time-Box-select").show(), $(".AM-PM-Box").show(), $(".Icon-IMG").css("margin-left", "-20px"), $(".Next-Page").css("margin-left", "-270px");
+            });
+            $(".Next-Page").click(function(){
+                // alert($(".Order-Name-Text").val());
+                // alert($("input[name=Dot-option]:checked").val());
+                // alert($("input[name=Time-option]:checked").val());
+                // alert($("input[name=AM-PM-Box-radio]:checked").val());
+                if($(".Order-Name-Text").val() == "") alert("請輸入訂貨人姓名");
+                else if($("input[name=Dot-option]:checked").val() == "ALL") alert("請選擇收貨地點");
+                else if($("input[name=Dot-option]:checked").val() == "內湖店面") {
+                    if($("input[name=Time-option]:checked").val() == "ALL") alert("請選擇收貨時間");
+
+                    if($("input[name=AM-PM-Box-radio]:checked").val() != "AM" && $("input[name=AM-PM-Box-radio]:checked").val() != "PM") alert("請選擇具體收貨時間");
+                    else if($("input[name=Time-option]:checked").val() == "d6" && $("input[name=AM-PM-Box-radio]:checked").val() == "AM") alert("請選擇具體收貨時間");
+                    else window.location.href = 'https://jku-workshop.github.io/Main-Order.html';
+                } else window.location.href = 'https://jku-workshop.github.io/Main-Order.html';
+            });
+        </script>
+    </div></div>
+</body>
+</html>
