@@ -30,11 +30,11 @@ body { color: #241808; }
 } .Contct-information-Box-Mail:hover { font-size: 23px; color: #422c0e; }
 /* Business-Time-Box */
 .Business-Time-Box {
-    width: 500px; height: 270px; margin-top: 150px; margin-left: 20px;
+    width: 470px; height: 270px; margin-top: 150px; margin-left: 20px;
     background-color: #ffe282; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
 } .Business-Time-Box:hover { background-color: #ffe07b; margin-top: 160px; margin-left: 30px; }
 .Business-Time-Box-Time {
-    width: 500px; height: 270px; margin-top: 10px; margin-left: 10px;
+    width: 470px; height: 270px; margin-top: 10px; margin-left: 10px;
     background-color: #fcebb4; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
 } .Business-Time-Box-Time:hover { background-color: #fff1c2; margin-top: 5px; margin-left: 5px; }
 .Business-Time-Box-Title {
@@ -83,9 +83,9 @@ body { color: #241808; }
 .BTBDD7 { margin-left: 4px; }
 /* Salad-Menu-Box */
 .Salad-Menu-Box {
-    width: 390px; height: 400px; margin-top: 450px; margin-left: 20px;
+    width: 390px; height: 400px; margin-top: 450px; margin-left: 50px;
     background-color: #ffe99f; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
-} .Salad-Menu-Box:hover { background-color: #ffecac; margin-top: 460px; margin-left: 30px; }
+} .Salad-Menu-Box:hover { background-color: #ffecac; margin-top: 460px; margin-left: 60px; }
 .Salad-Menu-Box-Menu {
     width: 390px; height: 400px; margin-top: 10px; margin-left: 10px;
     background-color: #ffdd6d; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
@@ -152,13 +152,13 @@ body { color: #241808; }
 } .Salad-One-Money:hover::before { width: 250%; }
 /* Donut-Menu-Box */
 .Donut-Menu-Box {
-    width: 300px; height: 360px; margin-top: 450px; margin-left: 450px;
-    background-color: #ffe99f; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
-} .Donut-Menu-Box:hover { background-color: #ffecac; margin-top: 460px; margin-left: 460px; }
+    width: 300px; height: 360px; margin-top: 890px; margin-left: 95px;
+    background-color: #ffe17f; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Donut-Menu-Box:hover { background-color: #f7d978; margin-top: 900px; margin-left: 105px; }
 .Donut-Menu-Box-Menu {
     width: 300px; height: 360px; margin-top: 10px; margin-left: 10px;
-    background-color: #ffdd6d; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
-} .Donut-Menu-Box-Menu:hover { background-color: #eecc5b; margin-top: 5px; margin-left: 5px; }
+    background-color: #ffe798; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Donut-Menu-Box-Menu:hover { background-color: #e9d595; margin-top: 5px; margin-left: 5px; }
 .Donut-Menu-Box-Title {
     margin-top: 10px; margin-left: 75px; font-size: 25px;
     position: absolute; transition: all 0.3s ease-in-out;
@@ -190,18 +190,18 @@ body { color: #241808; }
     text-transform: uppercase; cursor: pointer; color: #af8c2c; transition: all 1000ms; margin-left: 120px;
     font-size: 15px; position: relative; overflow: hidden; outline: 2px solid #af7b2c; font-family: 'JKU';
 }
-.Donut-One-Money:hover { color: #ffffff; transform: scale(1.1); outline: 2px solid #cabc70; box-shadow: 4px 5px 17px -4px #917826; }
+.Donut-One-Money:hover { color: #ffffff; transform: scale(1.1); outline: 2px solid #e2d066; box-shadow: 4px 5px 17px -4px #ebd385; }
 .Donut-One-Money::before {
     content: ""; position: absolute; left: -50px; top: 0; width: 0;
     height: 100%; background-color: #af902c; transform: skewX(45deg); z-index: -1; transition: width 1000ms;
 } .Donut-One-Money:hover::before { width: 250%; }
 /* Place-Order */
 .Place-Order {
-    padding: 1em 2em; border: none; border-radius: 5px; font-weight: bold; letter-spacing: 5px; margin-top: 820px;
-    text-transform: uppercase; cursor: pointer; color: #bd9936; transition: all 1000ms; margin-left: 480px;
+    padding: 1em 5em; border: none; border-radius: 5px; font-weight: bold; letter-spacing: 5px; margin-top: 1300px;
+    text-transform: uppercase; cursor: pointer; color: #bd9936; transition: all 1000ms; margin-left: 150px;
     font-size: 15px; position: relative; overflow: hidden; outline: 2px solid #df9c37; font-family: 'JKU';
 }
-.Place-Order:hover { color: #ffffff; transform: scale(1.1); outline: 2px solid #e4d05f; box-shadow: 4px 5px 17px -4px #be9d2f; }
+.Place-Order:hover { color: #ffffff; transform: scale(1.1); outline: 2px solid #f5da43; box-shadow: 4px 5px 17px -4px #d6ac20; }
 .Place-Order::before {
     content: ""; position: absolute; left: -50px; top: 0; width: 0;
     height: 100%; background-color: #caa733; transform: skewX(45deg); z-index: -1; transition: width 1000ms;
