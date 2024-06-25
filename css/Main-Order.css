@@ -1,0 +1,39 @@
+body { display: flex; justify-content: center; }
+/* Order-Box */
+.Order-Box {
+    width: 400px; height: 400px; margin-top: 20px; margin-left: 0px;
+    background-color: #ffdb67; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out;
+} .Order-Box:hover { background-color: #ffd445; margin-top: 30px; margin-left: 10px; }
+.Order-Box-Order {
+    width: 400px; height: 400px; margin-top: 5px; margin-left: 5px; display: flex; justify-content: center; overflow-x: auto;
+    background-color: #ffe798; border-radius: 10px; position: absolute; transition: all 0.3s ease-in-out; overflow-y: auto;
+} .Order-Box-Order:hover { background-color: #ffebab; margin-top: 3px; margin-left: 3px; }
+.Order-Box-Title-Big {
+    width: 360px; height: 50px; margin-left: 0px; display: flex; justify-content: center; align-items: center; font-size: 30px;
+    background-color: #ffe798; border-radius: 5px; position: absolute; transition: all 0.3s ease-in-out; position: fixed; z-index: 100;
+} .Order-Box-Title-Big:hover { background-color: #ffe590; width: 365px; height: 55px; }
+.Order-Box-Title {
+    width: 350px; height: 50px; margin-left: 0px; display: flex; justify-content: center; align-items: center; font-size: 22px;
+    background-color: #e4c254; border-radius: 5px; position: absolute; transition: all 0.3s ease-in-out;
+} .Order-Box-Title:hover { background-color: #c0aa61; width: 355px; height: 55px; }
+/* Order-Box-Box */
+.Order-Box-Box {
+    width: 350px; height: 90px; margin-left: 0px; display: flex; justify-content: center;
+    border-radius: 5px; position: absolute; transition: all 0.3s ease-in-out; 
+} .Order-Box-Box:hover { width: 355px; height: 95px; }
+.Order-Box-Box:nth-of-type(odd) { background-color: #ffd650; }
+.Order-Box-Box:nth-of-type(odd):hover { background-color: #ffe284; }
+.Order-Box-Box:nth-of-type(even) { background-color: #e7d085; }
+.Order-Box-Box:nth-of-type(even):hover { background-color: #e9c54e; }
+/* Price-One */
+.Price-One-Name { position: absolute; font-size: 30px; letter-spacing: 3px; margin-top: 10px; margin-left: 0px; color: #42361b; }
+.Price-One { position: absolute; font-size: 30px; letter-spacing: 3px; margin-top: 45px; margin-left: 0px; color: #55482c; }
+.Price-One-Unit { font-size: 20px; letter-spacing: 3px; color: #5c4922; }
+/* Order-Button */
+button { margin-top: 50px; margin-left: 230px; font-family: 'JKU'; display: inline-block; width: 120px; height: 40px; border-radius: 10px; border: 1px solid #5e4603; position: relative; overflow: hidden; transition: all 0.5s ease-in; z-index: 1; }
+button::before, button::after { content: ''; position: absolute; top: 0; width: 0; height: 100%; transform: skew(15deg); transition: all 0.5s; overflow: hidden; z-index: -1; }
+button::before { left: -10px; background: #e6d055; }
+button::after { right: -10px; background: #f8df6f; }
+button:hover::before, button:hover::after { width: 60%; }
+button:hover span { color: #aa963d; transition: 0.3s; }
+button span { color: #9e7607; font-size: 25px; transition: all 0.3s ease-in; }
