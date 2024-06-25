@@ -34,16 +34,16 @@
         $(".Now-Order-Title").append(`<label class="Now-Order-Title-Price"></label>`);
         $(".Now-Order-Title-Price").text('（單價 '+orderprice+' 元）');
         var top1 = 80, topall = 10, top24 = -57.7, left = 95, Row = 3, MAXI = 15, Now = 0, startcount = 1;
-        $(".Now-Order-Title").css("margin-left", left);
+        $(".Now-Order-Title").css("margin-left", left / 2);
         $(".Now-Order-Title-Price").css("margin-left", left/2);
         for(i = 1; i <= MAXI; i++) {
             if (i != 1 && ((i - 1) % Row) == 0) Now++;
-            $(".Count-Box").append(`<label style="margin-top: `+((i % Row) == 1 ? ((i == 1) ? top1 : topall) : top24)+`px; margin-left: `+(left * ((i % (MAXI + 1)) - Now * Row - 0))+`px;"><input type="radio" name="Count" value = "`+i+`"><span>`+i+`</span></label>`);
+            $(".Count-Box").append(`<label style="margin-top: `+((i % Row) == 1 ? ((i == 1) ? top1 : topall) : top24)+`px; margin-left: `+(left * ((i % (MAXI + 1)) - Now * Row - 0.5))+`px;"><input type="radio" name="Count" value = "`+i+`"><span>`+i+`</span></label>`);
         }
-        $(".Count-Box").append(`<label style="margin-top: 0px; margin-left: `+left+`px;"><input type="radio" name="Count" value = "More"><span>更多數量</span></label>`);
-        $(".Count-Box").append(`<div class="More-Count-Box" style="margin-top: 0px; margin-left: 120px;"><input ondrop="return false;" onpaste="return false;" onkeypress="return event.charCode>=48 && event.charCode<=57" class="More-Count-Box-Text" placeholder="填寫您需要的數量" required="" type="text"><span class="More-Count-Box-border"></span></div>`);
+        $(".Count-Box").append(`<label style="margin-top: 0px; margin-left: `+(left / 2)+`px;"><input type="radio" name="Count" value = "More"><span>更多數量</span></label>`);
+        $(".Count-Box").append(`<div class="More-Count-Box" style="margin-top: 0px; margin-left: `+left+`px;"><input ondrop="return false;" onpaste="return false;" onkeypress="return event.charCode>=48 && event.charCode<=57" class="More-Count-Box-Text" placeholder="填寫您需要的數量" type="text"><span class="More-Count-Box-border"></span></div>`);
         $(".Count-Box").append(`<span class="Now-Order-Price" style="margin-top: 50px; margin-left: 150px;"></span>`);
-        $(".Count-Box").append(`<button class="OK-Submit" style="margin-top: 100px; margin-left: 180px;">確認下單</button>`);
+        $(".Count-Box").append(`<button class="OK-Submit" style="margin-top: 100px; margin-left: `+(left * (3 / 2))+`px;">確認下單</button>`);
         $("input[name='Count']:eq("+(startcount - 1)+")").prop('checked', true);
         $(".Now-Order-Price").text('總計 '+(orderprice * $("input[name='Count']:eq("+(startcount - 1)+")").val())+' 元');
         $("input[name='Count']").click(function(){
