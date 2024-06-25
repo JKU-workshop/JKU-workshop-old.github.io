@@ -34,8 +34,8 @@
         $(".Now-Order-Title").append(`<label class="Now-Order-Title-Price"></label>`);
         $(".Now-Order-Title-Price").text('（單價 '+orderprice+' 元）');
         var top1 = 80, topall = 10, top24 = -57.7, left = 95, Row = 3, MAXI = 15, Now = 0, startcount = 1;
-        $(".Now-Order-Title").css("margin-left", left / 2);
-        $(".Now-Order-Title-Price").css("margin-left", left/2);
+        $(".Now-Order-Title").css("margin-left", 0);
+        $(".Now-Order-Title-Price").css("margin-left", left * (1 / 2));
         for(i = 1; i <= MAXI; i++) {
             if (i != 1 && ((i - 1) % Row) == 0) Now++;
             $(".Count-Box").append(`<label style="margin-top: `+((i % Row) == 1 ? ((i == 1) ? top1 : topall) : top24)+`px; margin-left: `+(left * ((i % (MAXI + 1)) - Now * Row - 1))+`px;"><input type="radio" name="Count" value = "`+i+`"><span>`+i+`</span></label>`);
