@@ -10,7 +10,7 @@ body { display: flex; justify-content: center; color: #5c4922; }
 .Count-Box label span:before { display: flex; flex-shrink: 0; content: ""; background-color: #fff; width: 1.5em; height: 1.5em; border-radius: 50%; margin-right: 0.375em; transition: 0.25s ease; box-shadow: inset 0 0 0 0.125em #cf871a; }
 /* Now-Order-Title */
 .Now-Order-Title { position: absolute; font-size: 25px; margin-top: 20px; }
-.Now-Order-Title-Price { position: absolute; font-size: 18px; margin-top: 45px; }
+.Now-Order-Title-Price { position: absolute; font-size: 18px; margin-top: 10px; }
 /* Now-Order-Price */
 .Now-Order-Price { position: absolute; font-size: 25px; }
 /* More-Count */
