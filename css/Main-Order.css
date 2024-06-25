@@ -10,7 +10,7 @@ body { display: flex; justify-content: center; }
 } .Order-Box-Order:hover { background-color: #ffebab; margin-top: 3px; margin-left: 3px; }
 .Order-Box-Title-Big {
     width: 360px; height: 50px; margin-left: 0px; display: flex; justify-content: center; align-items: center; font-size: 30px;
-    background-color: #ffe798; border-radius: 5px; position: absolute; transition: all 0.3s ease-in-out; position: fixed; z-index: 100;
+    background-color: #ffe798; border-radius: 5px; position: absolute; transition: all 0.3s ease-in-out; /* position: fixed; z-index: 100; */
 } .Order-Box-Title-Big:hover { background-color: #ffe590; width: 365px; height: 55px; }
 .Order-Box-Title {
     width: 350px; height: 50px; margin-left: 0px; display: flex; justify-content: center; align-items: center; font-size: 22px;

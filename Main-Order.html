@@ -47,28 +47,36 @@
         <div class="Order-Box-Box" style="margin-top: 60px;">
             <label class="Price-One-Name">原味甜甜圈</label>
             <label class="Price-One"><label class="Price-One-Unit">一個</label>15<label class="Price-One-Unit">元</label></label>
-            <button><span>下訂</span></button>
+            <button class="Donut-Order-Btn" value="Original"><span>下訂</span><span class="one-price-hide">15</span></button>
         </div>
         <div class="Order-Box-Box" style="margin-top: 160px;">
             <label class="Price-One-Name">紅豆甜甜圈</label>
             <label class="Price-One"><label class="Price-One-Unit">一個</label>25<label class="Price-One-Unit">元</label></label>
-            <button><span>下訂</span></button>
+            <button class="Donut-Order-Btn" value="RedBean"><span>下訂</span><span class="one-price-hide">25</span></button>
         </div>
         <div class="Order-Box-Box" style="margin-top: 260px;">
             <label class="Price-One-Name">芋頭甜甜圈</label>
             <label class="Price-One"><label class="Price-One-Unit">一個</label>25<label class="Price-One-Unit">元</label></label>
-            <button><span>下訂</span></button>
+            <button class="Donut-Order-Btn" value="Taro"><span>下訂</span><span class="one-price-hide">25</span></button>
         </div>
         <div class="Order-Box-Box" style="margin-top: 360px;">
             <label class="Price-One-Name">酸菜甜甜圈</label>
             <label class="Price-One"><label class="Price-One-Unit">一個</label>25<label class="Price-One-Unit">元</label></label>
-            <button><span>下訂</span></button>
+            <button class="Donut-Order-Btn" value="Sauerkraut"><span>下訂</span><span class="one-price-hide">25</span></button>
         </div>
         <div class="Order-Box-Box" style="margin-top: 460px;">
             <label class="Price-One-Name">巧克力卡士達甜甜圈</label>
             <label class="Price-One"><label class="Price-One-Unit">一個</label>25<label class="Price-One-Unit">元</label></label>
-            <button><span>下訂</span></button>
+            <button class="Donut-Order-Btn" value="chocolate"><span>下訂</span><span class="one-price-hide">25</span></button>
         </div>
     </div></div>
+    <script>
+        $(".one-price-hide").hide();
+        $(".Donut-Order-Btn").click(function(){
+            // alert($(this).text().substring(2));
+            // window.location.href = 'file:///C:/Users/xqiao/Documents/GitHub/JKU-workshop.github.io/Donut-Order.html?order='+$(this).val()+'&price='+$(this).text().substring(2);
+            window.location.href = 'https://jku-workshop.github.io/Donut-Order.html?order='+$(this).val()+'&price='+$(this).text().substring(2);
+        });
+    </script>
 </body>
 </html>
