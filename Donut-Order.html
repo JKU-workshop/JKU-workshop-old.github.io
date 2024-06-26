@@ -15,11 +15,11 @@
 <body class="cursor-hover">
     <label class="Now-Order-Title"></label>
     
-    <div><form class="Count-Box"></form></div>
+    <div class="Count-Box"></div>
     <script>
         // all name
         var name_EN = ["Original", "RedBean", "Taro", "Sauerkraut", "chocolate"];
-        var name_CH = ["　　原味甜甜圈　　", "　　紅豆甜甜圈　　", "　　芋頭甜甜圈 　　", "　　酸菜甜甜圈　　", "巧克力卡士達甜甜圈"];
+        var name_CH = ["原味甜甜圈", "紅豆甜甜圈", "芋頭甜甜圈 ", "酸菜甜甜圈", "巧克力卡士達甜甜圈"];
         var search = $(location).attr('search');
         var searchprice = search.substr(search.lastIndexOf("&"));
         // alert(search);
@@ -35,7 +35,7 @@
         $(".Now-Order-Title-Price").text('（單價 '+orderprice+' 元）');
         var top1 = 80, topall = 10, top24 = -57.7, left = 95, Row = 3, MAXI = 15, Now = 0, startcount = 1;
         $(".Now-Order-Title").css("margin-left", 0);
-        $(".Now-Order-Title-Price").css("margin-left", left * (1 / 2));
+        $(".Now-Order-Title-Price").css("margin-left", 0);
         for(i = 1; i <= MAXI; i++) {
             if (i != 1 && ((i - 1) % Row) == 0) Now++;
             $(".Count-Box").append(`<label style="margin-top: `+((i % Row) == 1 ? ((i == 1) ? top1 : topall) : top24)+`px; margin-left: `+(left * ((i % (MAXI + 1)) - Now * Row - 1))+`px;"><input type="radio" name="Count" value = "`+i+`"><span>`+i+`</span></label>`);
@@ -43,31 +43,36 @@
         $(".Count-Box").append(`<label style="margin-top: 0px; margin-left: `+(0)+`px;"><input type="radio" name="Count" value = "More"><span>更多數量</span></label>`);
         $(".Count-Box").append(`<div class="More-Count-Box" style="margin-top: 0px; margin-left: `+(left / 2)+`px;"><input ondrop="return false;" onpaste="return false;" onkeypress="return event.charCode>=48 && event.charCode<=57" class="More-Count-Box-Text" placeholder="填寫您需要的數量" type="text"><span class="More-Count-Box-border"></span></div>`);
         $(".Count-Box").append(`<span class="Now-Order-Price" style="margin-top: 50px; margin-left: `+(left / 2)+`px;"></span>`);
-        $(".Count-Box").append(`<button class="OK-Submit" style="margin-top: 90px; margin-left: `+(left / (3 / 2))+`px;">確認下單</button>`);
+        $(".Count-Box").append(`<button class="OK-btn" style="margin-top: 90px; margin-left: `+(left / (3 / 2))+`px;">確認下單</button>`);
         $("input[name='Count']:eq("+(startcount - 1)+")").prop('checked', true);
-        $(".Now-Order-Price").text('總計 '+(orderprice * $("input[name='Count']:eq("+(startcount - 1)+")").val())+' 元');
+        $(".Now-Order-Price").text('本項總計 '+(orderprice * $("input[name='Count']:eq("+(startcount - 1)+")").val())+' 元');
         $("input[name='Count']").click(function(){
+            // alert($("input[name='Count']:checked").val());
             // alert($(this).val());
             if($(this).val() == "More") {
                 // alert($("input[name='Count']:eq("+($(".More-Count-Box-Text").val() - 1)+")").val());
                 // alert($(".More-Count-Box-Text").val());
                 if ($(".More-Count-Box-Text").val() != "" && $(".More-Count-Box-Text").val() <= 15) {
                     $("input[name='Count']:eq("+($(".More-Count-Box-Text").val() - 1)+")").prop('checked', true);
-                    $(".Now-Order-Price").text('總計 '+(orderprice * $(".More-Count-Box-Text").val())+' 元');
+                    $(".Now-Order-Price").text('本項總計 '+(orderprice * $(".More-Count-Box-Text").val())+' 元');
                     $(".More-Count-Box-Text").val("");
                 } else {
-                    if ($(".More-Count-Box-Text").val() == "") $(".Now-Order-Price").text('總計 '+(orderprice * 0)+' 元');
-                    else $(".Now-Order-Price").text('總計 '+(orderprice * $(".More-Count-Box-Text").val()) +' 元');
+                    if ($(".More-Count-Box-Text").val() == "") $(".Now-Order-Price").text('本項總計 '+(orderprice * 0)+' 元');
+                    else $(".Now-Order-Price").text('本項總計 '+(orderprice * $(".More-Count-Box-Text").val()) +' 元');
                 }
-            } else $(".Now-Order-Price").text('總計 '+(orderprice * $(this).val())+' 元');
+            } else $(".Now-Order-Price").text('本項總計 '+(orderprice * $(this).val())+' 元');
         });
         $(".More-Count-Box-Text").change(function(){
             if ($(".More-Count-Box-Text").val() <= 15) {
                 $("input[name='Count']:eq("+($(".More-Count-Box-Text").val() - 1)+")").prop('checked', true);
-                $(".Now-Order-Price").text('總計 '+(orderprice * $(".More-Count-Box-Text").val())+' 元');
+                $(".Now-Order-Price").text('本項總計 '+(orderprice * $(".More-Count-Box-Text").val())+' 元');
                 $(".More-Count-Box-Text").val("");
             }
-            else $(".Now-Order-Price").text('總計 '+(orderprice * $(this).val())+' 元');
+            else $(".Now-Order-Price").text('本項總計 '+(orderprice * $(this).val())+' 元');
+        });
+        $(".OK-btn").click(function(){
+            // alert($("input[name='Count']:checked").val());
+            if ($("input[name='Count']:checked").val() == "More" && $(".More-Count-Box-Text").val() == "") alert("請填寫您需要的"+(name_CH[name_EN.indexOf(ordername)])+"數量");
         });
     </script>
 </body>
