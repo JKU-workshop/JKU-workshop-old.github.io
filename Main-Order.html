@@ -13,38 +13,10 @@
     <title>健康優烘焙坊</title>
 </head>
 <body class="cursor-hover">
-    <div class="Order-Box"><div class="Order-Box-Order">
-        <div class="Order-Box-Title-Big" style="margin-top: 0px;">沙拉船（營養三明治）</div>
-        <div class="Order-Box-Title" style="margin-top: 60px;">基本配料：滷蛋、小黃瓜、沙拉</div>
-        <div class="Order-Box-Box" style="margin-top: 120px;">
-            <label class="Price-One-Name">照燒豬肉絲</label>
-            <label class="Price-One"><label class="Price-One-Unit">一份</label>50<label class="Price-One-Unit">元</label></label>
-            <button class="Salad-Order-Btn" value="0"><span>下訂</span><span class="one-price-hide">50</span></button>
-        </div>
-        <div class="Order-Box-Box" style="margin-top: 220px;">
-            <label class="Price-One-Name">烤雞肉絲</label>
-            <label class="Price-One"><label class="Price-One-Unit">一份</label>50<label class="Price-One-Unit">元</label></label>
-            <button class="Salad-Order-Btn" value="1"><span>下訂</span><span class="one-price-hide">50</span></button>
-        </div>
-        <div class="Order-Box-Box" style="margin-top: 320px;">
-            <label class="Price-One-Name">熱狗薯餅</label>
-            <label class="Price-One"><label class="Price-One-Unit">一份</label>50<label class="Price-One-Unit">元</label></label>
-            <button class="Salad-Order-Btn" value="2"><span>下訂</span><span class="one-price-hide">50</span></button>
-        </div>
-        <div class="Order-Box-Box" style="margin-top: 420px;">
-            <label class="Price-One-Name">火腿起司</label>
-            <label class="Price-One"><label class="Price-One-Unit">一份</label>50<label class="Price-One-Unit">元</label></label>
-            <button class="Salad-Order-Btn" value="3"><span>下訂</span><span class="one-price-hide">50</span></button>
-        </div>
-        <div class="Order-Box-Box" style="margin-top: 520px;">
-            <label class="Price-One-Name">卡拉雞腿</label>
-            <label class="Price-One"><label class="Price-One-Unit">一份</label>60<label class="Price-One-Unit">元</label></label>
-            <button class="Salad-Order-Btn" value="4"><span>下訂</span><span class="one-price-hide">60</span></button>
-        </div>
-    </div></div>
-    <div class="Order-Box" style="margin-top: 450px;"><div class="Order-Box-Order">
-        <div class="Order-Box-Title-Big" style="margin-top: 0px;">甜甜圈系列</div>
-        <div class="Order-Box-Box" style="margin-top: 60px;">
+    <div class="Order-Box"><div class="Order-Box-Order saladbox"></div></div>
+    <div class="Order-Box" style="margin-top: 450px;"><div class="Order-Box-Order donutbox">
+        
+        <!-- <div class="Order-Box-Box" style="margin-top: 60px;">
             <label class="Price-One-Name">原味甜甜圈</label>
             <label class="Price-One"><label class="Price-One-Unit">一個</label>15<label class="Price-One-Unit">元</label></label>
             <button class="Donut-Order-Btn" value="0"><span>下訂</span><span class="one-price-hide">15</span></button>
@@ -68,9 +40,27 @@
             <label class="Price-One-Name">巧克力卡士達甜甜圈</label>
             <label class="Price-One"><label class="Price-One-Unit">一個</label>25<label class="Price-One-Unit">元</label></label>
             <button class="Donut-Order-Btn" value="4"><span>下訂</span><span class="one-price-hide">25</span></button>
-        </div>
+        </div> -->
     </div></div>
     <script>
+        //salad
+        $(".saladbox").append(`<div class="Order-Box-Title-Big" style="margin-top: 0px;">沙拉船（營養三明治）</div>`);
+        $(".saladbox").append(`<div class="Order-Box-Title" style="margin-top: 60px;">基本配料：滷蛋、小黃瓜、沙拉</div>`);
+        var salad_top = 120, salad_margintop = 100;
+        //change
+        var name_CH_salad = ["照燒豬肉絲", "烤雞肉絲", "熱狗薯餅", "火腿起司", "卡拉雞腿"];
+        var price_salad = [50, 50, 50, 50, 60];
+        //
+        for(i = 1; i <= name_CH_salad.length; i++) { $(".saladbox").append(`<div class="Order-Box-Box" style="margin-top: `+(salad_top + salad_margintop * (i - 1))+`px;"><label class="Price-One-Name">`+(name_CH_salad[i - 1])+`</label><label class="Price-One"><label class="Price-One-Unit">一份</label>`+(price_salad[i - 1])+`<label class="Price-One-Unit">元</label></label><button class="Salad-Order-Btn" value="`+(i - 1)+`"><span>下訂</span><span class="one-price-hide">`+(price_salad[i - 1])+`</span></button></div>`); }
+        //donut
+        $(".donutbox").append(`<div class="Order-Box-Title-Big" style="margin-top: 0px;">甜甜圈系列</div>`);
+        var donut_top = 60, donut_margintop = 100;
+        //change
+        var name_CH_donut = ["原味甜甜圈", "紅豆甜甜圈", "芋頭甜甜圈 ", "酸菜甜甜圈", "巧克力卡士達甜甜圈"];
+        var price_donut = [15, 25, 25, 25, 25];
+        //
+        for(i = 1; i <= name_CH_donut.length; i++) { $(".donutbox").append(`<div class="Order-Box-Box" style="margin-top: `+(donut_top + donut_margintop * (i - 1))+`px;"><label class="Price-One-Name">`+(name_CH_donut[i - 1])+`</label><label class="Price-One"><label class="Price-One-Unit">一個</label>`+(price_donut[i - 1])+`<label class="Price-One-Unit">元</label></label><button class="Salad-Order-Btn" value="`+(i - 1)+`"><span>下訂</span><span class="one-price-hide">`+(price_donut[i - 1])+`</span></button></div>`); }
+        //
         $(".one-price-hide").hide();
         $(".Donut-Order-Btn").click(function(){
             // alert($(this).text().substring(2));
