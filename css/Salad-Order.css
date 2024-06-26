@@ -29,3 +29,24 @@ body { display: flex; justify-content: center; color: #5c4922; }
 .OK-btn:hover::after { transform: skew(45deg) translate(-50%, -50%); }
 .OK-btn:hover { color: var(--color2); }
 .OK-btn:active { filter: brightness(.7); transform: scale(.98); }
+/* B-dish */
+.B-dish-choose { font-size: 25px; display: flex; justify-content: left; position: absolute; }
+.B-dish-button { display: flex; gap: 10px; justify-content: left; margin: 10px; width: 160px; font-size: 18px; position: relative; align-items: center; color: #796334; }
+.B-dish-button input[name="B-dish"] { position: absolute; opacity: 0; }
+.B-dish-check { position: relative; display: inline-block; width: 24px; height: 24px; border-radius: 50%; border: 2px solid #ccc; box-shadow: 0px 0px 5px #00000033; transform: translateZ(-25px); transition: all 0.3s ease-in-out; }
+.B-dish-check::before { position: absolute; content: ''; width: 10px; height: 10px; top: 5px; left: 5px; border-radius: 50%; background-color: #fff; box-shadow: 0px 0px 10px #00000080; opacity: 0; transition: all 0.3s ease-in-out; }
+.B-dish-button input[name="B-dish"]:checked + .B-dish-check { border-color: #b89b5c; transform: translateZ(0px); background-color: #fff; }
+.B-dish-button input[name="B-dish"]:checked + .B-dish-check::before { opacity: 1; }
+/* onof-salad */
+.onof-salad-Box { transform-style: preserve-3d; perspective: 1000px; position: absolute; }
+.onof-salad-pane { outline: 2px solid #d3b45d; box-shadow: 0 0 10px #ffae0077, inset 0 0 10px #ff990077; height: 1cm; width: 4.5cm; border-radius: 5px; position: relative; overflow: hidden; transition: 0.7s ease; }
+.onof-salad-input { display: none; }
+.onof-salad-label { height: 1cm; width: 1.5cm; float: left; font-weight: 500; letter-spacing: -1px; font-size: 20x; padding: 0px; position: relative; z-index: 1; color: #c29e00; text-align: center; padding-top: 10px; }
+.onof-salad-selection { display: none; position: absolute; height: 1cm; width: calc(4.5cm / 3); z-index: 0; left: 0; top: 0; box-shadow: 0 0 10px #ffa60077; transition: .15s ease; }
+.onof-salad-label:has(input:checked) { color: #6d6240; }
+.onof-salad-pane:has(.onof-salad-label:nth-child(1):hover) { transform: rotateY(-30deg); }
+.onof-salad-pane:has(.onof-salad-label:nth-child(3):hover) { transform: rotateY(35deg); }
+.onof-salad-label:has(input:checked) ~ .onof-salad-selection { background-color: #ffe75d; display: inline-block; }
+.onof-salad-label:nth-child(1):has(input:checked) ~ .onof-salad-selection { transform: translateX(calc(4.5cm * 0/3)); }
+.onof-salad-label:nth-child(2):has(input:checked) ~ .onof-salad-selection { transform: translateX(calc(4.5cm * 1/3)); }
+.onof-salad-label:nth-child(3):has(input:checked) ~ .onof-salad-selection { transform: translateX(calc(4.5cm * 2/3)); }
